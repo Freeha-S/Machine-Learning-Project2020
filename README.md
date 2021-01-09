@@ -7,8 +7,11 @@ Dr. Ian McLoughlin
 ### Student
 Freha Saleem
 ## Project Description
-The project goal is to  create a web service that uses machine learning to make predictions based on the data set powerproduction.csv to produce a model that accurately predicts wind turbine power output from wind speed
-values, as in the data set.
+The project goal is to  create a web service that uses machine learning models to make predictions about the power generation of wind turbine  on the basis of given wind speed value. The machine learning models are trained on the data provided in powerproduction.csv file.
+Machine learning models used
+- Polynomial Regression Model
+- Neural Networks
+- Random Forest Model
 
 ## About this Repository
 This repository contain
