@@ -127,4 +127,5 @@ This will activate localhost server at http://127.0.0.1:5000/.
 To stop the server running, press ctrl+c in terminal.
 
 ## Web App
-![Alt text](Templates\web-service.PNG?raw=true "Application Interface")
+  <img src="Templates\web-service.PNG" /> 
+
