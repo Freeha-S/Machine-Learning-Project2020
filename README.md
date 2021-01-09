@@ -32,11 +32,11 @@ This repository contain
 Accessing the Web App
 In order to open the web app localy, clone or download this github repository (keep the directory structure intact).
 
-## Option 1)To Run the App in Virtual environment
+## To Run the App in Virtual environment
 
 The following steps depend on the operating system.
 
-## A) Linux
+### Linux
 
 - Within the directory, create a new virtual environment, typing in the terminal
 ~~~~code
@@ -56,17 +56,20 @@ Start the web app using the command:
 
 ~~~~
 export FLASK_APP=web-service.py
-To run the server program, type:
-python -m flask run
-This will activate localhost server at http://127.0.0.1:5000/.
 ~~~~
+To run the server program, type:
+~~~~
+flask run
+~~~~
+This will activate localhost server at http://127.0.0.1:5000/.
+
 To stop the server running, press ctrl+c in terminal.
 
 In order to leave the virtual environment:
 ~~~~
 deactivate
 ~~~~
-B) Windows
+### Windows
 
 Within the directory, create a new virtual environment, typing in the terminal
 
@@ -102,7 +105,7 @@ In order to leave the virtual environment:
 ~~~~code
 deactivate
 ~~~~
-Option 2) Docker
+### Docker
 
 - Install Docker on your computer, typing in the terminal:
 
