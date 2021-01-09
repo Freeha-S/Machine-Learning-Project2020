@@ -41,8 +41,8 @@ The following steps depend on the operating system.
 ## A) Linux
 
 - Within the directory, create a new virtual environment, typing in the terminal
-
-~~~~python -m venv venv
+~~~~code
+python -m venv venv
 ~~~~
 Activate the virtual environment:
 
