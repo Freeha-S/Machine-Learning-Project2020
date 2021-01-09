@@ -120,7 +120,7 @@ docker build . -t power-app
 In order to create and start the docker container, execute the command:
 
 ~~~~code
-docker run  -d -p 5000:5000 power-app
+docker run --name power-container -d -p 5000:5000 power-app
 ~~~~
 This will activate localhost server at http://127.0.0.1:5000/.
 
