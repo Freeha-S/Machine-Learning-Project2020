@@ -118,7 +118,7 @@ Inside the directory holding the repository, run the following commands to build
 ~~~~code
 docker build . -t power-image
 ~~~~
-<img src="Templates\dockerimage.PNG" /> 
+<img src="Templates\dockerImage.PNG" /> 
 In order to create and start the docker container, execute the command:
 
 ~~~~code
