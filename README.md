@@ -17,13 +17,14 @@ Machine learning models used are
 This repository contain
 - Project2020.ipynb a jupyter notebook containing the data exploration and model fitting
 - web-service.py A flask app server
-- Templates folder contain the index .html file
-- models files
+- Templates folder contains the index .html file and images
+- models folder contains model files
 - requirement.text file have information about the packages needed for the app
+- gitignore  list of file ignored by Github.
 - Dockerfile configuration for docker
--.gitignore
-- .dockerignore
-
+- .dockerignore contents of this file are ignored by Docker.
+- powerproduction.csv contain dataset
+- README.md
 ## How to clone this repository
 - Go to GitHub.
 - Go to  repository: https://github.com/Freeha-S/Machine-Learning-Project2020
@@ -115,12 +116,13 @@ deactivate
 Inside the directory holding the repository, run the following commands to build a docker image
 
 ~~~~code
-docker build . -t power-app
+docker build . -t power-image
 ~~~~
+<img src="Templates\dockerimage.PNG" /> 
 In order to create and start the docker container, execute the command:
 
 ~~~~code
-docker run --name power-container -d -p 5000:5000 power-app
+docker run --name power-container -d -p 5000:5000 power-image
 ~~~~
 This will activate localhost server at http://127.0.0.1:5000/.
 
