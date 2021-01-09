@@ -15,16 +15,16 @@ Machine learning models used are
 
 ## About this Repository
 This repository contain
-- Project2020.ipynb a jupyter notebook containing the data exploration and model fitting
-- web-service.py A flask app server
-- Templates folder contains the index .html file and images
-- models folder contains model files
-- requirement.text file have information about the packages needed for the app
-- gitignore  list of file ignored by Github.
-- Dockerfile configuration for docker
-- .dockerignore contents of this file are ignored by Docker.
-- powerproduction.csv contain dataset
-- README.md
+- **Project2020.ipynb** a jupyter notebook containing the data exploration and model fitting
+- **web-service.py** A flask app server
+- **Templates folder** contains the index .html file and images
+- **models** folder contains model files
+- **requirement.text** file have information about the packages needed for the app
+- **.gitignore**  contents of file ignored by Github.
+- **Dockerfile** configuration for docker
+- **.dockerignore** contents of this file are ignored by Docker.
+- **powerproduction.csv** contain dataset
+- **README.md**
 ## How to clone this repository
 - Go to GitHub.
 - Go to  repository: https://github.com/Freeha-S/Machine-Learning-Project2020
