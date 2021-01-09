@@ -1,5 +1,5 @@
 # Machine-Learning-Project2020
-## Project2020 assessment for Machine Learning and Statistic Module at GMIT.
+## Project2020
 My submission for the Project2020 for Machine Learning and Statistics module at GMIT.
 
 ### Lecturer
@@ -11,6 +11,16 @@ The project goal is to  create a web service that uses machine learning to make 
 values, as in the data set.
 
 ## About this Repository
+This repository contain
+- Project2020.ipynb a jupyter notebook containing the data exploration and model fitting
+- web-service.py A flask app server
+- Templates folder contain the index .html file
+- models files
+- requirement.text file have information about the packages needed for the app
+- Dockerfile configuration for docker
+-.gitignore
+- .dockerignore
+
 
 
 ## How to clone this repository
