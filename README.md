@@ -1,5 +1,5 @@
 # Machine-Learning-Project2020
-## Project2020 assessment for Machine Learning and Statistic Module at GMIT.
+## Project2020
 My submission for the Project2020 for Machine Learning and Statistics module at GMIT.
 
 ### Lecturer
@@ -11,7 +11,15 @@ The project goal is to  create a web service that uses machine learning to make 
 values, as in the data set.
 
 ## About this Repository
-
+This repository contain
+- Project2020.ipynb a jupyter notebook containing the data exploration and model fitting
+- web-service.py A flask app server
+- Templates folder contain the index .html file
+- models files
+- requirement.text file have information about the packages needed for the app
+- Dockerfile configuration for docker
+-.gitignore
+- .dockerignore
 
 ## How to clone this repository
 - Go to GitHub.
@@ -24,69 +32,93 @@ values, as in the data set.
 Accessing the Web App
 In order to open the web app localy, clone or download this github repository (keep the directory structure intact).
 
-## Option 1) Virtual environment
+## To Run the App in Virtual environment
 
 The following steps depend on the operating system.
 
-## A) Linux
+### Linux
 
 - Within the directory, create a new virtual environment, typing in the terminal
-
-~~~~python -m venv venv
+~~~~code
+python -m venv venv
 ~~~~
 Activate the virtual environment:
 
-~~~~source venv/bin/activate ~~~~
+~~~~code
+source venv/bin/activate 
+~~~~
 Install all the required libraries listed in the requirements.txt file:
 
-~~~~pip install -r requirements.txt~~~~
+~~~~
+pip install -r requirements.txt
+~~~~
 Start the web app using the command:
 
-~~~~export FLASK_APP=web-service.py
+~~~~
+export FLASK_APP=web-service.py
+~~~~
 To run the server program, type:
-
-python -m flask run
+~~~~
+flask run
+~~~~
 This will activate localhost server at http://127.0.0.1:5000/.
 
 To stop the server running, press ctrl+c in terminal.
 
 In order to leave the virtual environment:
-
+~~~~
 deactivate
-B) Windows
+~~~~
+### Windows
 
 Within the directory, create a new virtual environment, typing in the terminal
 
-~~~~python -m venv venv~~~~
+~~~~code
+python -m venv venv
+~~~~
 Activate the virtual environment:
 
-~~~~\venv\Scripts\activate.bat~~~~
+~~~~code
+\venv\Scripts\activate.bat
+~~~~
 Install all the required libraries listed in the requirements.txt file:
 
-~~~~pip install -r requirements.txt~~~~
+~~~~code
+pip install -r requirements.txt
+~~~~
 To run the server program, type:
 
-~~~~set FLASK_APP=webservice.py~~~~
+~~~~code
+set FLASK_APP=web-service.py
+~~~~
 To run the server program, type
 
-~~~~flask run~~~~
+~~~~code
+flask run
+~~~~
  This will activate localhost server at http://127.0.0.1:5000/.
 
 To stop the server running, press ctrl+c in terminal.
 
 In order to leave the virtual environment:
 
-~~~~deactivate~~~~
-Option 2) Docker
+~~~~code
+deactivate
+~~~~
+### Docker
 
 - Install Docker on your computer, typing in the terminal:
 
 Inside the directory holding the repository, run the following commands to build a docker image
 
-~~~~docker build . -t power-app~~~~
+~~~~code
+docker build . -t power-app
+~~~~
 In order to create and start the docker container, execute the command:
 
-~~~~docker run --name rando-container -d -p 5000:5000 power-app~~~~
+~~~~code
+docker run --name power-container -d -p 5000:5000 power-app
+~~~~
 This will activate localhost server at http://127.0.0.1:5000/.
 
 To stop the server running, press ctrl+c in terminal.
