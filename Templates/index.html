@@ -4,9 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  
  <!-- Optional JavaScript; choose one of the two! -->
   
       <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -19,40 +19,47 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
       -->
-  
+     
     <title>Wind Turbine Power Prediction</title>
   </head>
   <body>
         <!-- add some vertical space -->
       <div style="margin-top:15px"></div>
-      
       <div class="container">
         <div class="row">
-          <div class="col-sm">
+          <div class="col-sm bg-success text-white">
             <h1>Wind Turbine Power Prediction</h1>
             
             <div style="margin-top:15px"></div>
-            <p>A web service use Machine Learning models to predict the Power Production of the wind Turbine on the bases of given wind speed</p>
-               
-            
-              <form class="form-inline">
-                <div class="form-group row">
-                  <div class="col-xs-2">
-                    <label for="input">wind speed (m/s)</label>
-                    <input class="form-control input-sm" id="input" type="number" placeholder="Input wind speed (m/s)" step="0.01" min=1>
-                    <button type="button" class="btn btn-primary" id="predict">Predict</button>
+            <p>A web service use Machine Learning models to predict the Power Production of the wind Turbine on the bases of given wind speed. <br/>
+              The cut-in wind speed of turbine is 0.325 and cut- out wind speed is 24.39.
+            </p>
+            </div> 
+           
+          </div> 
+          <hr>
+          <div class="container h-100">
+            <div class="row justify-content-center align-items-center h-100">
+              <div class="col col-sm-6 col-md-6 col-lg-4 col-xl-3">
+               <form class="form-inline">
+                <label for="input" class="mb-2 mr-sm-2">Wind Speed (m/s)</label>
+                  <input class="form-control mb-2 mr-sm-2" id="input" type="number" placeholder="Wind speed (m/s)" step="0.01" min=0.325 max = 25>
+                    <button type="button" class="btn btn-primary mb-2" id="predict">Predict</button>
                     <div><small id="inputcheck" class="text-muted">
-                      Must be an integer from 1 - 24
+                      Must be an number from 0.325 - 25
                     </small></div>
-                           
-              </div>
-            </div>
+                  </div>
               </form>
+            </div>
           
-         
+             
+          <hr>
+        </div>
+         <div class="container">
+          <div class="info-form">
             <table>
               <tr>
-                <td>Model 1: polynomial regression - scikit-learn.</td>
+                <td>Model 1: Polynomial Regression - scikit-learn.</td>
                 <td><input id="output1" class="form-control" type="text" placeholder=" Power " readonly>
                 <td>kW</td>
 
@@ -72,14 +79,7 @@
   
           </div>
         </div>
-      </div>
-        
-         
-        
-     
-  
-     
-
+      
    
   </body>
   <script>
@@ -92,7 +92,7 @@
       var speed = document.getElementById("input").value;//by id
       // Check that it's an integer & within allowed range.
       console.log(speed)
-      if (speed!='' && between(speed, 1, 24)){
+      if (speed!='' && speed>=0.325 && speed<25){
         $.getJSON("/api/model1/"+encodeURI(speed), function(result) {
           $('#output1').val(parseFloat(result.value).toFixed(2));
           console.log(result) //checking
